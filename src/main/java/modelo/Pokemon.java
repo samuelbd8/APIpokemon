@@ -17,15 +17,15 @@ public class Pokemon {
     public Pokemon(JSONObject json) {
         this.nombre = json.getString("name");
 
-        // peso
+        
         this.peso = json.getInt("weight");
 
-        // habilidad (primera)
+        
         JSONArray abilities = json.getJSONArray("abilities");
         JSONObject abilityObj = abilities.getJSONObject(0);
         this.habilidad = abilityObj.getJSONObject("ability").getString("name");
 
-        // imagen
+        
         this.imagen = json.getJSONObject("sprites").getString("front_default");
     }
 

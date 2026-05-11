@@ -19,7 +19,7 @@ public class ApiService {
     private static final HttpClient httpclient = HttpClient.newHttpClient();
     private static final String URL = "https://pokeapi.co/api/v2/pokemon/";
 
-    // 🔹 Buscar un Pokémon
+   
     public Pokemon getPokemon(String nombre) throws IOException, InterruptedException {
 
         HttpRequest request = HttpRequest.newBuilder()
@@ -39,7 +39,7 @@ public class ApiService {
         return new Pokemon(json);
     }
 
-    // 🔹 Listar muchos Pokémon
+    
     public void getAllPokemons() throws IOException, InterruptedException {
 
         String url = "https://pokeapi.co/api/v2/pokemon?limit=100";
